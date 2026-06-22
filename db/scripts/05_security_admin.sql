@@ -6,3 +6,4 @@ grant create session to staff_loket;
 grant create session to viewer_laporan;
 grant role_staff_loket to staff_loket;
 grant role_viewer_laporan to viewer_laporan;
+

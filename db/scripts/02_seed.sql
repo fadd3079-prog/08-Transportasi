@@ -1,7 +1,3 @@
--- Seed data transportasi bus.
--- 100 pelanggan, 10 bus, dan 125 pemesanan tiket.
--- Data dibuat dominan Jawa Tengah dan sekitar DIY agar database terasa hidup.
-
 insert into kota(id_kota,nama_kota,provinsi) values(1,'Wonosobo','Jawa Tengah');
 insert into kota(id_kota,nama_kota,provinsi) values(2,'Purwokerto','Jawa Tengah');
 insert into kota(id_kota,nama_kota,provinsi) values(3,'Purbalingga','Jawa Tengah');
