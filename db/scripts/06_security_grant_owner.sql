@@ -1,0 +1,12 @@
+grant select on kota to role_staff_loket;
+grant select on terminal to role_staff_loket;
+grant select on operator_bus to role_staff_loket;
+grant select on bus to role_staff_loket;
+grant select on rute to role_staff_loket;
+grant select on jadwal_perjalanan to role_staff_loket;
+grant select,insert on pelanggan to role_staff_loket;
+grant select,insert on pemesanan_tiket to role_staff_loket;
+grant update(status_pembayaran,status_pemesanan) on pemesanan_tiket to role_staff_loket;
+grant select on view_laporan_pemesanan to role_viewer_laporan;
+grant select on view_pendapatan_operator to role_viewer_laporan;
+grant select on view_jadwal_pemesanan to role_viewer_laporan;
