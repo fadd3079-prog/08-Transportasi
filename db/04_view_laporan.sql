@@ -216,37 +216,3 @@ group by
 select *
 from transportasi.v_kursi_tersedia
 order by waktu_berangkat;
-
-
-
-
--- grant akses
-grant select on v_jadwal_bus_lengkap to role_penumpang;
-grant select on v_detail_pemesanan to role_penumpang;
-grant select on v_pembayaran_berhasil to role_penumpang;
-grant select on v_riwayat_pemesanan_pengguna to role_penumpang;
-grant select on v_kursi_tersedia to role_penumpang;
-
-grant select on v_jadwal_bus_lengkap to role_staff_loket;
-grant select on v_detail_pemesanan to role_staff_loket;
-grant select on v_pembayaran_berhasil to role_staff_loket;
-grant select on v_riwayat_pemesanan_pengguna to role_staff_loket;
-grant select on v_kursi_tersedia to role_staff_loket;
-
-grant select on v_laporan_pendapatan_operator to role_viewer_laporan;
-grant select on v_rute_terlaris to role_viewer_laporan;
-
-select * from v_detail_pemesanan;
-select * from v_pembayaran_lengkap;
-select * from v_riwayat_pemesanan_pengguna;
-select * from v_laporan_pendapatan_operator;
-select * from v_rute_terlaris
-order by jumlah_pemesanan desc;
-
-select * from transportasi.v_jadwal_bus_lengkap; 
-select *from transportasi.v_detail_pemesanan;
-select * from transportasi.v_pembayaran_lengkap;
-select * from transportasi.v_riwayat_pemesanan_pengguna;
-select * from transportasi.v_laporan_pendapatan_operator;
-select * from transportasi.v_rute_terlaris;
-

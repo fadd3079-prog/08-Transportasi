@@ -1,4 +1,4 @@
-CREATE USER transportasi IDENTIFIED BY "3079";
+CREATE USER transportasi IDENTIFIED BY "password";
 GRANT CREATE SESSION TO transportasi;
 GRANT CREATE TABLE TO transportasi;
 GRANT CREATE VIEW TO transportasi;
