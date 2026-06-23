@@ -149,24 +149,6 @@ join terminal ta on r.id_terminal_asal=ta.id_terminal
 join terminal tt on r.id_terminal_tujuan=tt.id_terminal;
 
 
-create or replace view v_laporan_pendapatan_operator as
-select
-    o.id_operator,
-    o.nama_operator,
-    count(p.id_pemesanan) as jumlah_tiket_berhasil,
-    sum(p.harga_bayar) as total_pendapatan,
-    avg(p.harga_bayar) as rata_rata_harga
-from operator_bus o
-join bus b on o.id_operator=b.id_operator
-join jadwal_perjalanan j on b.id_bus=j.id_bus
-join rute r on j.id_rute=r.id_rute
-join pemesanan_tiket p on j.id_jadwal=p.id_jadwal
-where p.status_pembayar
-select *an='BERHASIL'
-group by o.id_operator,o.nama_operator;
-
-
-
 create or replace view v_rute_terlaris as
 select
     r.id_rute,
