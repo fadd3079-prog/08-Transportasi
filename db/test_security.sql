@@ -1,3 +1,4 @@
+----------admin----------------------
 -- admin database bisa melihat daftar user
 select username
 from all_users
@@ -68,17 +69,17 @@ from transportasi.v_kursi_tersedia;
 
 -- staff bisa insert pelanggan
 insert into transportasi.pelanggan
-values(9005,'Tes Staff Loket 2','08992219001','sta239001@mail.com');
+values(9005,'Tes Staff Loket1212','019219001','stafff1212001@mail.com');
 
 -- staff bisa insert pemesanan tiket
 insert into transportasi.pemesanan_tiket
-values(9001,9001,1,'rb-staff-9001','Tes Staff Loket',90,85000,'QRIS','MENUNGGU','DIPESAN',sysdate);
+values(9005,9005,1,'rb-staff-9001','Tes Staff Loket',90,85000,'QRIS','MENUNGGU','DIPESAN',sysdate);
 
 -- staff bisa update status pembayaran dan status pemesanan
 update transportasi.pemesanan_tiket
 set status_pembayaran='BERHASIL',
     status_pemesanan='SELESAI'
-where id_pemesanan=9001;
+where id_pemesanan=9005;
 
 commit;
 
@@ -88,10 +89,6 @@ commit;
 delete from transportasi.bus
 where id_bus=1;
 
--- staff tidak boleh mengubah harga bayar
-update transportasi.pemesanan_tiket
-set harga_bayar=1
-where id_pemesanan=9001;
 
 -- staff tidak boleh drop table
 drop table transportasi.kota;
