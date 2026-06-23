@@ -181,3 +181,14 @@ join jadwal_perjalanan j on r.id_rute=j.id_rute
 join pemesanan_tiket p on j.id_jadwal=p.id_jadwal
 where p.status_pembayaran='BERHASIL'
 group by r.id_rute,ta.nama_terminal,tt.nama_terminal;
+
+--backup
+grant select on kota to role_staff_loket;
+grant select on terminal to role_staff_loket;
+grant select on operator_bus to role_staff_loket;
+grant select on bus to role_staff_loket;
+grant select on rute to role_staff_loket;
+grant select on jadwal_perjalanan to role_staff_loket;
+grant select,insert on pelanggan to role_staff_loket;
+grant select,insert on pemesanan_tiket to role_staff_loket;
+grant update(status_pembayaran,status_pemesanan) on pemesanan_tiket to role_staff_loket;
